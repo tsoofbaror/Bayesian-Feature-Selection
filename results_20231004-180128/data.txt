@@ -1,0 +1,20 @@
+{
+    "run_metadata": {
+        "throw": true,
+        "throw_ratio": 0.2,
+        "iterations": 3000,
+        "current_iteration": 0
+    },
+    "priors": {
+        "a_alpha_prior": 5,
+        "a_beta_prior": 2,
+        "tau_alpha_prior": 7,
+        "tau_beta_prior": 3,
+        "sigma_alpha_prior": 7,
+        "sigma_beta_prior": 3
+    },
+    "tests": {
+        "geweke_test": false,
+        "true_w": null
+    }
+}

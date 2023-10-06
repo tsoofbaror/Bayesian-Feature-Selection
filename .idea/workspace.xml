@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1173af85-4706-4304-9755-e6db113474a0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Razi/.idea/Razi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TinaX/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TradeCalPython/.idea/TradeCalPython.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TradeCalPython/isolation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TradeCalPython/tradecal_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../empire_stuff/unifed_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gibss animation/.idea/gibss animation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../is_it_economics/.idea/is_it_economics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/spike_and_slab_for_publishing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spike_and_slab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/visualizations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Conv/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Conv/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTBot/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTBot/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTBot/ultrabot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTBot/ultrabot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTPDFTest/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTPDFTest/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTtest/all_inputs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTtest/all_inputs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTtest/all_strings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTtest/all_strings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTtest/strings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTtest/strings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GPTtest/wh.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GPTtest/wh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GatedGCN_Nmr/architecutre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GatedGCN_Nmr/data_preprocess.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GatedGCN_Nmr/training.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GatedGCN_Nmr/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PL/data_preperation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PL/data_preperation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PL/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PL/plots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PL/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../PL/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_effortless1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LElbow_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_effortless1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LHip_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_effortless1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/LShoulder_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_effortless1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RElbow_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_effortless1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RHip_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_effortless2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_effortless3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_may1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_may2.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_may3.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/RShoulder_angles_may4.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/feature_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Razi/feature_extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/table.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Razi/table.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/table_fft.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Razi/table_fft.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Razi/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Razi/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SelfTrainedAI/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SelfTrainedAI/data_preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SelfTrainedAI/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SelfTrainedAI/plots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SelfTrainedAI/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SelfTrainedAI/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SelfTrainedAI2/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../SelfTrainedAI2/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SelfTrainedAI2/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../SelfTrainedAI2/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TV1/data_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TV1/data_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TV1/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TV1/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TV1/trash.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TV1/trash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TinaX/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TinaX/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass2rl/actor_critic.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass2rl/actor_critic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass2rl/actor_critic_v2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass2rl/old_ac.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass2rl/old_ac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass2rl/original.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass2rl/original.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass2rl/policy_with_baseline.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass2rl/policy_with_baseline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass3drl/actor_critic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass3drl/actor_critic_cartpole.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass3drl/actor_critic_cartpole.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass3drl/actor_critic_mountain.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass3drl/actor_critic_mountain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass3drl/prog_nn_acrobot_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass3drl/prog_nn_acrobot_car.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ass3drl/prog_nn_mount_acrobot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ass3drl/prog_nn_mount_acrobot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dqn/deep_q_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dqn/deep_q_learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dqn/old_dqn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dqn/q_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dqn/q_learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../einav/clustering.py" beforeDir="false" afterPath="$PROJECT_DIR$/../einav/clustering.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../einav/dt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../einav/dt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../einav/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/../einav/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../einav/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../einav/preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../einav/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../einav/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/check_distances.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/check_distances.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/gpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/json_to_pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/json_to_pandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/main_vs_nav.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/main_vs_nav.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/navigator_vs_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/navigator_vs_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/remove_dups.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/remove_dups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/scrape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empire_stuff/table_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/../empire_stuff/table_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/ashdod-pilot.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/ashdod-pilot_done.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/ashdod-pilot_enriched.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/catalog_enriched_embedded.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/test_enriched_embedded.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/test_result_top_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/test_result_top_5.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graffiti_system/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../graffiti_system/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_it_economics/create_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../is_it_economics/create_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_it_economics/gpt_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../is_it_economics/gpt_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_it_economics/vanilla_transformer/nets.py" beforeDir="false" afterPath="$PROJECT_DIR$/../is_it_economics/vanilla_transformer/nets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../is_it_economics/vanilla_transformer/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/../is_it_economics/vanilla_transformer/training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon/nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon/nn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon/old_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon/old_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon/plots_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon/plots_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon/training_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon/training_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon/util_funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon/util_funcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon_home_ass/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon_home_ass/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../melon_home_ass/trash.py" beforeDir="false" afterPath="$PROJECT_DIR$/../melon_home_ass/trash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nnetflowtest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nnetflowtest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nnetflowtest/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../nnetflowtest/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpleNN/data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/../simpleNN/data_preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpleNN/drug200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpleNN/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../simpleNN/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpleNN/plots.py" beforeDir="false" afterPath="$PROJECT_DIR$/../simpleNN/plots.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2TylcFKwBvUS94aMBlRZrnIiPtt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="spike_and_slab_for_publishing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1173af85-4706-4304-9755-e6db113474a0" name="Changes" comment="" />
+      <created>1692023279307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692023279307</updated>
+      <workItem from="1692023280518" duration="14957000" />
+      <workItem from="1692177513045" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spike_and_slab_for_publishing$main.coverage" NAME="main Coverage Results" MODIFIED="1692035848529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
