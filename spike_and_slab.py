@@ -5,6 +5,7 @@ import json
 import tqdm
 import torch
 import numpy as np
+import math
 import copy
 from datetime import datetime
 import os
@@ -34,31 +35,35 @@ class RegressionSpikeAndSlab:
 
         if metadata['data']['id_col']:
             self.metadata['data']['x'] = self.metadata['data']['x'][:, 1:]
+            del self.metadata['data']['col_names'][0]
         # normalize data
         (self.metadata['normalized_data']['x_normalized'], self.metadata['normalized_data']['x_mean'],
          self.metadata['normalized_data']['x_std']) = normalize(metadata['data']['x'])
         (self.metadata['normalized_data']['y_normalized'], self.metadata['normalized_data']['y_mean'],
          self.metadata['normalized_data']['y_std']) = normalize(metadata['data']['y'])
 
-        # helper variables
-        if self.metadata['tests']['geweke_test']:
-            self.metadata['normalized_data']['y_normalized'] = np.random.normal(loc=0.0, scale=1, size=len(self.y))
 
         # init model latent variables and data
         self.x = self.metadata['normalized_data']['x_normalized'].astype(float)
         self.y = self.metadata['normalized_data']['y_normalized'].astype(float)
+
+        # helper variables
+        if self.metadata['tests']['geweke_test']:
+            self.metadata['normalized_data']['y_normalized'] = np.random.normal(loc=0.0, scale=1, size=len(self.y))
+
 
         self.a = 0
         self.tau = 0
         self.sigma = 0
         self.s = np.zeros((self.x.shape[1]))
         self.w = np.zeros((self.x.shape[1]))
+        self.current_size = sum(self.s)
 
         self.current_time = datetime.now().strftime("%Y%m%d-%H%M%S")
-        self.metadata['data']['output_path'] += "_" + self.current_time
+        self.metadata['data']['output_path'] += "/results_" + self.current_time
 
         self.geweke = self.metadata['tests']['geweke_test']
-        self.geweke_pairs = [[], [], [], [], []]
+        self.geweke_pairs = [[], [], [], [], [], [],[]]
         if self.geweke:
             self.y_prior = None
             self.y = np.random.normal(loc=0.0, scale=1, size=len(self.y))
@@ -107,16 +112,26 @@ class RegressionSpikeAndSlab:
         self.geweke_pairs[2].append(tau_pairs)
         self.geweke_pairs[3].append(a_pairs)
         self.geweke_pairs[4].append(s_pairs)
+        if self.s[0] == 0:
+            self.geweke_pairs[5].append((0, w_s[0]))
+        else:
+            self.geweke_pairs[5].append((self.w[0], w_s[0]))
+
+        if self.s[1] == 0:
+            self.geweke_pairs[6].append((0, w_s[1]))
+        elif self.s[0] == 1:
+            self.geweke_pairs[6].append((self.w[1], w_s[1]))
+        else:
+            self.geweke_pairs[6].append((self.w[0], w_s[1]))
 
     def increment_s(self):
         self.current_size = sum(self.s)
         self.xs = get_xs(self.s, self.x)
         self.sample_w()
-        if self.s_to_sample == self.x.shape[1] - 1:
-            self.sample_a()
-            self.sample_tau()
-            self.sample_sigma()
-
+        self.sample_a()
+        self.sample_tau()
+        self.sample_sigma()
+        if self.s_to_sample == self.x.shape[1]-1:
             if self.geweke:
                 self.sample_geweke()
 
@@ -128,6 +143,7 @@ class RegressionSpikeAndSlab:
             return False
 
         else:
+
             self.s_to_sample += 1
             return True
 
@@ -143,9 +159,8 @@ class RegressionSpikeAndSlab:
         self.metadata['chain_samples']['log_probs'].append(log_prob)
 
     def sample_a(self):
-
-        alpha = self.current_size + self.metadata['priors']['a_alpha_prior']
-        beta = len(self.s) - self.current_size + self.metadata['priors']['a_beta_prior']
+        alpha = sum(self.s) + self.metadata['priors']['a_alpha_prior']
+        beta = len(self.s) - sum(self.s) + self.metadata['priors']['a_beta_prior']
         self.a = np.random.beta(alpha, beta, size=1)[0]
 
         self.metadata['chain_samples']['a']['a'].append(self.a)
@@ -153,7 +168,6 @@ class RegressionSpikeAndSlab:
         self.metadata['chain_samples']['a']['alpha'].append(alpha)
 
     def sample_w(self, in_cycle=True):
-
         if self.current_size == 0:
             self.w = np.array([0])
             self.metadata['chain_samples']['w'].append(copy.deepcopy(self.w))
@@ -197,7 +211,7 @@ class RegressionSpikeAndSlab:
 
     def sample_tau(self):
 
-        alpha = self.metadata['priors']['tau_alpha_prior'] + self.current_size / 2
+        alpha = self.metadata['priors']['tau_alpha_prior'] + sum(self.s) / 2
         beta = 1 / (0.5 * (self.w.T @ self.w) + self.metadata['priors']['tau_beta_prior'])
         self.tau = np.random.gamma(alpha, scale=beta, size=1)[0] ** -0.5
 
@@ -222,24 +236,36 @@ class RegressionSpikeAndSlab:
         ytx_sig_xty_0, sigma_inverse_0 = self.get_values_for_s(s0, xs_0)
         ytx_sig_xty_1, sigma_inverse_1 = self.get_values_for_s(s1, xs_1)
 
+
         exp_subtraction = (ytx_sig_xty_1 - ytx_sig_xty_0) / (2 * (self.sigma ** 4))
-        s1_prob = 0
-        if 30 > exp_subtraction > -30:
-            det_ratio = self.dets_ratio(sigma_inverse_1, sigma_inverse_0, xs_0, xs_1, s0, s1)
-            det_ratio = det_ratio ** (1 / 2)
-            pre_exp_expression = det_ratio * self.a / ((1 - self.a) * self.tau)
-            exp = np.exp(exp_subtraction)
-            s1_prob = 1 - (1 / (1 + pre_exp_expression * exp))
+        s0_ratio = 0
 
-        elif exp_subtraction > 30:
-            s1_prob = 1
-        elif exp_subtraction < -30:
-            s1_prob = 0
+        det_ratio = self.dets_ratio(sigma_inverse_1, sigma_inverse_0, xs_0, xs_1, s0, s1)
+        det_ratio = det_ratio ** (1 / 2)
+        # det_ratio = (np.linalg.det(sigma_inverse_1) / np.linalg.det(sigma_inverse_0)) ** (-1 / 2)
+        # if np.abs(det_ratio_a-det_ratio) > 0.0000001:
+        #     print(det_ratio)
+        #     print(det_ratio_a)
+        #     exit()
+        pre_exp_expression = det_ratio * self.a / ((1 - self.a) * self.tau)
 
-        if random.random() < s1_prob:
-            self.s[self.s_to_sample] = 1
+        const = 100000000
+        if exp_subtraction >= 20:
+            s0_ratio = pre_exp_expression * const
+        elif exp_subtraction <= -20:
+            s0_ratio = pre_exp_expression * 0.1/const
         else:
-            self.s[self.s_to_sample] = 0
+            exp = np.exp(exp_subtraction)
+            s0_ratio = pre_exp_expression * exp
+
+        if self.s[self.s_to_sample] == 0:
+            s1_prob = 1 / (1 + (1 / s0_ratio))
+            if random.random() < s1_prob:
+                self.s[self.s_to_sample] = 1
+        else:
+            s0_prob = 1 / (1 + s0_ratio)
+            if random.random() < s0_prob:
+                self.s[self.s_to_sample] = 0
 
         return self.increment_s()
 
@@ -252,6 +278,7 @@ class RegressionSpikeAndSlab:
         else:
             sigma_inverse = (self.tau ** -2) * np.eye(sum(s)) + (self.sigma ** -2) * xtx
         ytx_sig_xty = solve_with_cholesky(sigma_inverse, xty.T) @ xty
+        #ytx_sig_xty = xty.T @ np.linalg.inv(sigma_inverse) @ xty
 
         return ytx_sig_xty, sigma_inverse
 
@@ -264,32 +291,6 @@ class RegressionSpikeAndSlab:
         denominator = a11 - vtsig
         new_ratio = 1 / denominator
         return new_ratio
-
-    def sample_gweke(self):
-        pass
-        # # y from posterior
-        # self.y = self.sigma * np.random.normal(0, 1, self.y.shape)
-        # if len(self.w) > 1 and self.w[0] != 0:
-        #     self.y += self.xs @ self.w
-        #
-        # # y from prior
-        # sigma = np.random.gamma(self.sigma_alpha_prior, scale=1 / self.sigma_beta_prior, size=1)[0] ** -0.5
-        # tau = np.random.gamma(self.tau_alpha_prior, scale=1 / self.tau_beta_prior, size=1)[0] ** -0.5
-        # new_a = np.random.beta(self.a_alpha_prior, self.a_beta_prior, size=1)[0]
-        # s = np.random.binomial(1, new_a, size=self.x.shape[1])
-        # w = np.random.normal(loc=0.0, scale=tau, size=self.x.shape[1])
-        # w_s = s * w
-        # y_prior = self.x @ w_s + sigma * np.random.normal(0, 1, self.y.shape)
-        # y_pairs = (self.y, y_prior)
-        # sigma_pairs = (self.sigma, sigma)
-        # tau_pairs = (self.tau, tau)
-        # a_pairs = (self.a, new_a)
-        # s_pairs = (sum(self.s), sum(s))
-        # self.gweke_pairs[0].append(y_pairs)
-        # self.gweke_pairs[1].append(sigma_pairs)
-        # self.gweke_pairs[2].append(tau_pairs)
-        # self.gweke_pairs[3].append(a_pairs)
-        # self.gweke_pairs[4].append(s_pairs)
 
     def calculate_mse(self):
         if sum(self.s) == 0:

@@ -9,7 +9,7 @@ def get_model_parameters(filename, script_path):
 
             'normalized_data': {'x_normalized': 0, 'y_normalized': 0, 'x_mean': 0, 'x_std': 0, 'y_mean': 0, 'y_std': 0},
 
-            'run_metadata': {'throw': True, 'throw_ratio': 0.2, 'iterations': 3000, 'current_iteration': 0},
+            'run_metadata': {'throw': True, 'throw_ratio': 0.4, 'iterations': 10000, 'current_iteration': 0},
 
             'chain_samples': {'save_samples': True, 'a': {'a': [], 'alpha': [], 'beta': []},
                               'tau': {'tau': [], 'alpha': [], 'beta': []},

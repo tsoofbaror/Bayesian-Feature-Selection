@@ -6,5 +6,6 @@ from parameters import get_model_parameters
 
 if __name__ == "__main__":
     params = get_model_parameters("test_data.csv", os.path.abspath(__file__))
+    params['tests']['geweke_test'] = True
     model = RegressionSpikeAndSlab(params)
     model.run()
